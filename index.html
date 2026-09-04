@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDAG Registration form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading"><span class="logo">KDAG</span> <br>Registration Form</h1>
+    <form id="registration">
+        <div class="loginSection">
+            <span>Enter Registration Details</span><br>
+            <span class="tag">Name</span>
+            <input type="text" id ="name" placeholder="Enter Name" required /><br>
+            <span class="tag">Rollno</span>
+            <input type="text" id="rollno" placeholder="Enter Roll Number" required /><br>
+            <span class="tag">Email-ID</span>
+            <input type="email" id="email" placeholder="Enter Institute Emai-ID" required /><br>
+            <label for="department">Choose your Department:</label><br>
+            <select name="department" id="department">
+                <option value="Aerospace">Aerospace Engineering</option>
+                <option value="Agricultural & Food Engineering">Agricultural & Food Engineering</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Architecture & Regional Planning">Architecture & Regional Planning</option>
+                <option value="Biotechnology">Biotechnology</option>
+                <option value="Chemical Engineering">Chemical Engineering</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Electronics & Electrical Communication Engineering">Electronics & Electrical
+                    Communication Engineering</option>
+                <option value="Geology & Geophysics">Geology & Geophysics</option>
+                <option value="Industrial & Systems Engineering">Industrial & Systems Engineering</option>
+                <option value="Infrastructure Design & Management">Infrastructure Design & Management</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Metallurgical & Materials Engineering">Metallurgical & Materials Engineering</option>
+                <option value="Mining Engineering">Mining Engineering</option>
+                <option value="Ocean Engineering & Naval Architecture">Ocean Engineering & Naval Architecture</option>
+                <option value="Physics">Physics</option>
+                <option value="Rural Development">Rural Development</option>
+            </select><br>
+            <button class="Submit" onclick="validate()">Register</button>
+
+
+
+
+        </div>
+    </form>
+    <script>
+        function validate(){
+            var name = document.getElementById('name').value;
+            var rollno = document.getElementById('rollno').value;
+            var email = document.getElementById('email').value;
+            var dept = document.getElementById('department').value;
+            name = name.toUpperCase();
+            // if(name==" " || rollno ==" " || email==" " || dept = " "){
+            //     alert("All fields are required");
+            // }\
+            if(name.includes(" ")==false){
+                alert("Enter you full name");
+            }
+            else if(rollno.length != 9){
+                alert('Roll number should have 9 characters.');
+            }
+            else if (email.endsWith('@kgpian.iitkgp.ac.in') == false) {
+                alert('Please enter valid Institute Email-Id');
+            }
+            else{
+                alert(`Welcome ${name} Registration Successful! Welcome to the Bootcamp`);
+            }
+            
+        
+        }
+    </script>
+</body>
+
+</html>
