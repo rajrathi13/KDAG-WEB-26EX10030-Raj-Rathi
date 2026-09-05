@@ -1,6 +1,6 @@
 # KDAG-WEB-26EX10030-Raj-Rathi
 Personal Details:-
-Hello! My name is Raj Rathi. I am from the department of Exploration Geophysics. Enrolled in its BS course. I am a boarder of LBS Hall of residence. I am from Malkapur Maharashtra.
+Hello! My name is Raj Rathi. I am from the department of Exploration Geophysics. Enrolled in its BS course. I am a boarder of LBS Hall of residence. I am from Malkapur, Maharashtra.
 
 Professional Details:-
 I am learning web development since class 6th. I was interested in learning how websites are built since then.
